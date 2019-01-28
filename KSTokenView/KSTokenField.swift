@@ -329,7 +329,7 @@ open class KSTokenField: UITextField {
    /**
    Untokenzies the layout
    */
-   func untokenize() {
+  open func untokenize() {
       if (!_removesTokensOnEndEditing) {
          return
       }
@@ -345,7 +345,7 @@ open class KSTokenField: UITextField {
    /**
    Tokenizes the layout
    */
-   func tokenize() {
+  open func tokenize() {
       _state = .opened
       for token: KSToken in tokens {
          _insertToken(token, shouldLayout: false)
